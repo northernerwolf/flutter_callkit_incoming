@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_callkit_incoming/entities/android_params.dart';
 import 'package:flutter_callkit_incoming/entities/call_event.dart';
 import 'package:flutter_callkit_incoming/entities/call_kit_params.dart';
@@ -150,7 +152,7 @@ class HomePageState extends State<HomePage> {
         ),
         extra: <String, dynamic>{'userId': '1a2b3c4d'},
         headers: <String, dynamic>{'apiKey': 'Abc@123!', 'platform': 'flutter'},
-        android: const AndroidParams(
+        android:  AndroidParams(
           isCustomNotification: true,
           isShowLogo: false,
           ringtonePath: 'system_ringtone_default',
@@ -162,6 +164,7 @@ class HomePageState extends State<HomePage> {
           missedCallNotificationChannelName: 'Missed Call',
           isImportant: true,
           isBot: false,
+          custom: Container(),
         ),
         ios: const IOSParams(
           iconName: 'CallKitLogo',

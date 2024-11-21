@@ -34,7 +34,7 @@ Future<void> showCallkitIncoming(String uuid) async {
     ),
     extra: <String, dynamic>{'userId': '1a2b3c4d'},
     headers: <String, dynamic>{'apiKey': 'Abc@123!', 'platform': 'flutter'},
-    android: const AndroidParams(
+    android:  AndroidParams(
       isCustomNotification: true,
       isShowLogo: false,
       ringtonePath: 'system_ringtone_default',
@@ -42,6 +42,13 @@ Future<void> showCallkitIncoming(String uuid) async {
       backgroundUrl: 'assets/test.png',
       actionColor: '#4CAF50',
       textColor: '#ffffff',
+      custom: Row(
+        children: [
+Container(
+ color: Colors.amber,
+)
+        ],
+      )
     ),
     ios: const IOSParams(
       iconName: 'CallKitLogo',
