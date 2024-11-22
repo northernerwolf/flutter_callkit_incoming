@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'android_params.g.dart';
@@ -21,7 +20,6 @@ class AndroidParams {
     this.isShowFullLockedScreen,
     this.isImportant,
     this.isBot,
-    required this.custom,
   });
 
   /// Using custom notifications.
@@ -67,8 +65,6 @@ class AndroidParams {
   /// Used primarily to identify automated tooling.
   /// https://developer.android.com/reference/androidx/core/app/Person#isBot()
   final bool? isBot;
-
-  final Widget custom;
 
   factory AndroidParams.fromJson(Map<String, dynamic> json) =>
       _$AndroidParamsFromJson(json);
