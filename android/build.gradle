@@ -39,6 +39,7 @@ android {
     }
     defaultConfig {
         minSdk 16
+        //noinspection OldTargetApi
         targetSdk 34
 
         consumerProguardFiles 'consumer-rules.pro'

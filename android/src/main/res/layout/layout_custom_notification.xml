@@ -89,9 +89,8 @@
 
             <LinearLayout
                 android:id="@+id/llAccept"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/base_margin_x4_8"
-                android:layout_weight="1"
+                android:layout_width="@dimen/base_margin_x4"
+                android:layout_height="@dimen/base_margin_x4"
                 android:background="@drawable/rounded_button_accept"
                 android:clickable="true"
                 android:focusable="true"
@@ -101,8 +100,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/base_margin_half"
                     android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
                     android:src="@drawable/ic_accept"
                     android:tint="@android:color/white"
                     app:tint="@android:color/white"
@@ -113,11 +112,12 @@
                     style="@style/Widget.Compat.NotificationActionText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text=" "
-                    android:textAllCaps="false"
-                    android:layout_marginRight="@dimen/base_margin_half"
                     android:layout_marginLeft="@dimen/base_margin_half"
+                    android:layout_marginRight="@dimen/base_margin_half"
+                    android:gravity="center"
+                    android:text="@string/text_accept"
+                    android:visibility="gone"
+                    android:textAllCaps="false"
                     android:textColor="@color/action_text" />
 
             </LinearLayout>
