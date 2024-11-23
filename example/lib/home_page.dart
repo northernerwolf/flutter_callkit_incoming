@@ -135,7 +135,7 @@ class HomePageState extends State<HomePage> {
       final params = CallKitParams(
         id: _currentUuid,
         nameCaller: 'Hien Nguyen',
-        appName: 'Callkit',
+        appName: 'Call',
         avatar: 'https://i.pravatar.cc/100',
         handle: '0123456789',
         type: 0,
@@ -152,7 +152,7 @@ class HomePageState extends State<HomePage> {
         headers: <String, dynamic>{'apiKey': 'Abc@123!', 'platform': 'flutter'},
         android: const AndroidParams(
           isCustomNotification: true,
-          isShowLogo: false,
+          isShowLogo: true,
           ringtonePath: 'system_ringtone_default',
           backgroundColor: '#0955fa',
           backgroundUrl: 'assets/test.png',
@@ -164,7 +164,7 @@ class HomePageState extends State<HomePage> {
           isBot: false,
         ),
         ios: const IOSParams(
-          iconName: 'CallKitLogo',
+          iconName: 'CallKitLo',
           handleType: '',
           supportsVideo: true,
           maximumCallGroups: 2,
