@@ -102,7 +102,7 @@ class CallkitNotificationManager(private val context: Context) {
                 "Missed Call"
             ),
         )
-
+//        createNotificationChanel("", "")
         notificationBuilder = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID_INCOMING)
         notificationBuilder.setAutoCancel(false)
         notificationBuilder.setChannelId(NOTIFICATION_CHANNEL_ID_INCOMING)
@@ -114,6 +114,7 @@ class CallkitNotificationManager(private val context: Context) {
         notificationBuilder.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
         notificationBuilder.setOngoing(true)
         notificationBuilder.setWhen(0)
+        notificationBuilder.setSilent(true)
         notificationBuilder.setTimeoutAfter(
             data.getLong(
                 CallkitConstants.EXTRA_CALLKIT_DURATION,
@@ -171,6 +172,11 @@ class CallkitNotificationManager(private val context: Context) {
             notificationBuilder.setCustomContentView(notificationSmallViews)
             notificationBuilder.setCustomBigContentView(notificationViews)
             notificationBuilder.setCustomHeadsUpContentView(notificationSmallViews)
+            notificationBuilder.setSilent(true) // Suppress automatic app name inclusion
+            notificationBuilder.setContentTitle("") // Do not set a title
+            notificationBuilder.setContentText("") // Do not set any text
+            notificationBuilder.setOngoing(true)
+            notificationBuilder.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
         } else {
             notificationBuilder.setContentText(
                 data.getString(
